@@ -34,6 +34,14 @@ header {
 }
 
 header nav .container-fluid div ul li button {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
     padding: 1rem;
 }
 
@@ -52,7 +60,7 @@ header nav .container-fluid div ul li button {
     transition: 0s;
 }
 
-.nav-item button {
+/* .nav-item button {
     padding: 0.25rem 1rem 0.25rem 1rem;
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
@@ -61,7 +69,7 @@ header nav .container-fluid div ul li button {
     border: none;
     text-decoration: none;
     cursor: pointer;
-}
+} */
 
 header nav .container-fluid div ul li button:hover {
     background-color: #A5D272;
