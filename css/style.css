@@ -158,21 +158,33 @@ main {
     height: 100%;
 }
 
-.section-principal{
+.section-carrusel{
     font-size: 4rem;
     color: white;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
     font-family: "Poppins", sans-serif;
     text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.528); */
-    background-color: rgba(0, 0, 0, 0.554);
-    padding: 7rem 10rem 7rem 10rem;
+    border-bottom: 0.1rem solid white;
     margin-bottom: 5rem;
 }
 
-.section-principal div .carousel-inner div {
-    background-color: rgba(0, 0, 0, 0.673);
+.section-categoria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.section-categoria button{
+    background: none;
+    border: none;
+    text-decoration: none;
+    border: 0.1rem solid white;
+}
+
+.section-categoria button img{
+    width: 100%;
+    height: auto;
 }
 
 .carousel-inner div img{
