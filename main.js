@@ -1,6 +1,7 @@
 
 const allProducts = document.getElementById("allProducts");
 allProducts.addEventListener("click", () => {
+    document.getElementById("navbarNavDropdown").classList.remove("show");
 
     let cardsContainer = document.getElementById("cardsContainer");
     cardsContainer.innerHTML = "";
@@ -33,6 +34,8 @@ allProducts.addEventListener("click", () => {
 
 const mujer = document.getElementById("mujer");
 mujer.addEventListener("click", () => {
+    document.getElementById("navbarNavDropdown").classList.remove("show");
+
     let flitradoM = zapatillas.filter((item) => item.categoria === "MUJER");
 
     let cardsContainer = document.getElementById("cardsContainer");
@@ -66,6 +69,9 @@ mujer.addEventListener("click", () => {
 
 const hombre = document.getElementById("hombre");
 hombre.addEventListener("click", () => {
+    document.getElementById("navbarNavDropdown").classList.remove("show");
+
+
     let flitradoH = zapatillas.filter((item) => item.categoria === "HOMBRE");
 
     let cardsContainer = document.getElementById("cardsContainer");
@@ -100,6 +106,9 @@ hombre.addEventListener("click", () => {
 
 const niños = document.getElementById("niños");
 niños.addEventListener("click", () => {
+    document.getElementById("navbarNavDropdown").classList.remove("show");
+
+
     let flitradoN = zapatillas.filter((item) => item.categoria === "NIÑOS");
 
     let cardsContainer = document.getElementById("cardsContainer");

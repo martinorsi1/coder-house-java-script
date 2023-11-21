@@ -60,6 +60,9 @@ header nav .container-fluid div ul li button {
     transition: 0s;
 }
 
+.navbar-brand{
+    margin-right: 0;
+}
 /* .nav-item button {
     padding: 0.25rem 1rem 0.25rem 1rem;
     font-family: "Poppins", sans-serif;
@@ -102,9 +105,10 @@ header nav .container-fluid div ul li button:hover {
 }
 
 .carrito img {
-    width: 3rem;
+    width: 4rem;
     height: auto;
     cursor: pointer;
+    padding-right: 1rem;
 }
 
 
@@ -161,6 +165,14 @@ main {
     padding-bottom: 5rem;
     font-family: "Poppins", sans-serif;
     text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.528); */
+    background-color: rgba(0, 0, 0, 0.554);
+    padding: 7rem 10rem 7rem 10rem;
+    margin-bottom: 5rem;
+}
+
+.section-principal div .carousel-inner div {
+    background-color: rgba(0, 0, 0, 0.673);
 }
 
 .carousel-inner div img{
@@ -201,8 +213,7 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.2);
-    transition: 0.5s;
+    border: solid 0.35rem #A5D272;
 }
 
 .card-img {
@@ -348,6 +359,7 @@ footer {
     align-items: center;
     column-gap: 2rem;
     margin-right: 1.5rem;
+    margin-bottom: 0;
 }
 
 .iconos ul li img {
@@ -358,4 +370,6 @@ footer {
 
 .container-footer div h3 {
     margin-left: 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 0;
 }
