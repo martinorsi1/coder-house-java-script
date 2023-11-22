@@ -26,7 +26,8 @@ font-family: 'Poppins', sans-serif;
 /* ...................................................HEADER........................................... */
 
 header {
-    background-color: #D0CEC1;
+    /* background-color: #D0CEC1; */
+    background-color: black;
     width: 100%;
     height: 100%;
     border-bottom: 0.1rem solid white;
@@ -74,11 +75,22 @@ header nav .container-fluid div ul li button {
     cursor: pointer;
 } */
 
-header nav .container-fluid div ul li button:hover {
+.navbar-nav .nav-link {
+    transition: border-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+    color: white;
+    text-decoration: underline white;
+    border-color: white;
+}
+
+/* header nav .container-fluid div ul li button:hover {
     background-color: #A5D272;
     border-radius: 3rem;
     color: white;
-}
+} */
 
 .container-fluid button{
     border: none;
@@ -148,12 +160,13 @@ header nav .container-fluid div ul li button:hover {
 /* ...................................................MAIN........................................... */
 
 main {
-    background-color: #D0CEC1;
-    background-image: url("../assets/logoMe.png");
+    /* background-color: #D0CEC1; */
+    background-color: #F6F6F6;
+    /* background-image: url("../assets/logoMe.png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
+    background-attachment: fixed; */
     width: 100%;
     height: 100%;
 }
@@ -176,10 +189,25 @@ main {
 }
 
 .section-categoria button{
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
     background: none;
     border: none;
     text-decoration: none;
-    border: 0.1rem solid white;
+    border-left: 0.5rem solid #F6F6F6;
+    border-right: 0.5rem solid #F6F6F6;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .section-categoria button img{
@@ -216,17 +244,27 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #F6F6F6;
-    padding: 2rem;
+    /* padding: 2rem; */
     margin: 2rem;
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
+    border: solid 0.2rem black;
     box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.411);
 }
 
-.card:hover {
-    border: solid 0.35rem #A5D272;
+.card-info{
+    width: 16rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
+
+/* .card:hover {
+    border: solid 0.35rem #A5D272;
+} */
 
 .card-img {
     width: 16rem;
@@ -236,21 +274,22 @@ main {
 .card-h3 {
     font-size: 1.4rem;
     color: black;
-    font-weight: lighter;
     font-family: 'Poppins', sans-serif;
     text-align: center;
 }
 
 .card-btn {
     padding: 0.5rem;
-    margin-top: 2rem;
     font-family: "Poppins", sans-serif;
     font-size: 1.4rem;
     color: white;
     text-decoration: none;
-    background-color: #A5D272;
-    border: solid 0.3rem #A5D272;
-    border-radius: 3rem;
+    width: 100%;
+    /* background-color: #A5D272;
+    border: solid 0.3rem #A5D272; */
+    background-color: black;
+    border: solid 0.3rem black;
+    /* border-radius: 3rem; */
     cursor: pointer;
 }
 
@@ -350,7 +389,8 @@ main {
 footer {
     width: 100%;
     height: auto;
-    background-color: #BBB8A5;
+    /* background-color: #BBB8A5; */
+    background-color: black;
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
