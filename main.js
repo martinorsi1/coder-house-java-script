@@ -14,6 +14,7 @@ allProducts.addEventListener("click", () => {
         <img class="card-img" src="${item.imagen}" alt="${item.nombre}" />
         <h3 class="card-h3">${item.nombre}</h3>
         <p class="card-h3">$${item.precio}</p>
+        <p>${item.stock}</p>
         </div>
         <button id="boton${item.id}" class="card-btn">Agregar al Carrito</button>
         `;
@@ -21,55 +22,29 @@ allProducts.addEventListener("click", () => {
         cardsContainer.append(div);
 
         const boton = document.getElementById(`boton${item.id}`);
-        boton.addEventListener("click", () => agregarAlCarrito(item.id));
         boton.addEventListener("click", () => {
-            Swal.fire({
-                icon: "success",
-                title: "Producto Agregado al Carrito",
-                showConfirmButton: false,
-                timer: 800
-            });
+            if (item.stock > 0) {
+                agregarAlCarrito(item.id);
+                Swal.fire({
+                    icon: "success",
+                    title: "Producto Agregado al Carrito",
+                    showConfirmButton: false,
+                    timer: 800
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops... Lo sentimos, stock no disponible!",
+                    confirmButtonColor: "#451952",
+                });
+            }
         });
     });
 });
 
 
-// const mujer = document.getElementById("mujer");
-// mujer.addEventListener("click", () => {
-//     document.getElementById("navbarNavDropdown").classList.remove("show");
 
-//     let flitradoM = zapatillas.filter((item) => item.categoria === "MUJER");
-
-//     let cardsContainer = document.getElementById("cardsContainer");
-//     cardsContainer.innerHTML = "";
-
-//     flitradoM.forEach((item) => {
-//         const div = document.createElement("div");
-//         div.className = "card";
-//         div.innerHTML = `
-//         <div class="card-info">
-//         <img class="card-img" src="${item.imagen}" alt="${item.nombre}" />
-//         <h3 class="card-h3">${item.nombre}</h3>
-//         <p class="card-h3">$${item.precio}</p>
-//         </div>
-//         <button id="boton${item.id}" class="card-btn">Agregar al Carrito</button>
-//         `;
-
-//         cardsContainer.append(div);
-
-//         const boton = document.getElementById(`boton${item.id}`);
-//         boton.addEventListener("click", () => agregarAlCarrito(item.id));
-//         boton.addEventListener("click", () => {
-//             Swal.fire({
-//                 icon: "success",
-//                 title: "Producto Agregado al Carrito",
-//                 showConfirmButton: false,
-//                 timer: 800
-//             });
-//         });
-//     });
-// });
-
+// Función para manejar la acción común
 function seccionMujer(id) {
     document.getElementById("navbarNavDropdown").classList.remove("show");
 
@@ -93,14 +68,22 @@ function seccionMujer(id) {
         cardsContainer.append(div);
 
         const boton = document.getElementById(`boton${item.id}`);
-        boton.addEventListener("click", () => agregarAlCarrito(item.id));
         boton.addEventListener("click", () => {
-            Swal.fire({
-                icon: "success",
-                title: "Producto Agregado al Carrito",
-                showConfirmButton: false,
-                timer: 800
-            });
+            if (item.stock > 0) {
+                agregarAlCarrito(item.id);
+                Swal.fire({
+                    icon: "success",
+                    title: "Producto Agregado al Carrito",
+                    showConfirmButton: false,
+                    timer: 800
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops... Lo sentimos, stock no disponible!",
+                    confirmButtonColor: "#451952",
+                });
+            }
         });
     });
 }
@@ -120,42 +103,6 @@ Asegúrate de reemplazar "otroBoton" con el ID real de tu otro botón-enlaceMuje
 */
 
 
-// const hombre = document.getElementById("hombre");
-// hombre.addEventListener("click", () => {
-//     document.getElementById("navbarNavDropdown").classList.remove("show");
-
-
-//     let flitradoH = zapatillas.filter((item) => item.categoria === "HOMBRE");
-
-//     let cardsContainer = document.getElementById("cardsContainer");
-//     cardsContainer.innerHTML = "";
-
-//     flitradoH.forEach((item) => {
-//         const div = document.createElement("div");
-//         div.className = "card";
-//         div.innerHTML = `
-//         <div class="card-info">
-//         <img class="card-img" src="${item.imagen}" alt="${item.nombre}" />
-//         <h3 class="card-h3">${item.nombre}</h3>
-//         <p class="card-h3">$${item.precio}</p>
-//         </div>
-//         <button id="boton${item.id}" class="card-btn">Agregar al Carrito</button>
-//         `;
-
-//         cardsContainer.append(div)
-
-//         const boton = document.getElementById(`boton${item.id}`)
-//         boton.addEventListener("click", () => agregarAlCarrito(item.id));
-//         boton.addEventListener("click", () => {
-//             Swal.fire({
-//                 icon: "success",
-//                 title: "Producto Agregado al Carrito",
-//                 showConfirmButton: false,
-//                 timer: 800
-//             });
-//         });
-//     });
-// });
 
 // Función para manejar la acción común
 function seccionHombre() {
@@ -181,14 +128,22 @@ function seccionHombre() {
         cardsContainer.append(div);
 
         const boton = document.getElementById(`boton${item.id}`);
-        boton.addEventListener("click", () => agregarAlCarrito(item.id));
         boton.addEventListener("click", () => {
-            Swal.fire({
-                icon: "success",
-                title: "Producto Agregado al Carrito",
-                showConfirmButton: false,
-                timer: 800
-            });
+            if (item.stock > 0) {
+                agregarAlCarrito(item.id);
+                Swal.fire({
+                    icon: "success",
+                    title: "Producto Agregado al Carrito",
+                    showConfirmButton: false,
+                    timer: 800
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops... Lo sentimos, stock no disponible!",
+                    confirmButtonColor: "#451952",
+                });
+            }
         });
     });
 }
@@ -210,44 +165,6 @@ Este enfoque te permite reutilizar la lógica y los estilos para diferentes boto
 */
 
 
-
-
-// const niños = document.getElementById("niños");
-// niños.addEventListener("click", () => {
-//     document.getElementById("navbarNavDropdown").classList.remove("show");
-
-
-//     let flitradoN = zapatillas.filter((item) => item.categoria === "NIÑOS");
-
-//     let cardsContainer = document.getElementById("cardsContainer");
-//     cardsContainer.innerHTML = "";
-
-//     flitradoN.forEach((item) => {
-//         const div = document.createElement("div");
-//         div.className = "card";
-//         div.innerHTML = `
-//         <div class="card-info">
-//         <img class="card-img" src="${item.imagen}" alt="${item.nombre}" />
-//         <h3 class="card-h3">${item.nombre}</h3>
-//         <p class="card-h3">$${item.precio}</p>
-//         </div>
-//         <button id="boton${item.id}" class="card-btn">Agregar al Carrito</button>
-//         `;
-
-//         cardsContainer.append(div)
-
-//         const boton = document.getElementById(`boton${item.id}`)
-//         boton.addEventListener("click", () => agregarAlCarrito(item.id));
-//         boton.addEventListener("click", () => {
-//             Swal.fire({
-//                 icon: "success",
-//                 title: "Producto Agregado al Carrito",
-//                 showConfirmButton: false,
-//                 timer: 800
-//             });
-//         });
-//     });
-// });
 
 // Función para manejar la acción común
 function seccionNiños() {
@@ -273,14 +190,22 @@ function seccionNiños() {
         cardsContainer.append(div);
 
         const boton = document.getElementById(`boton${item.id}`);
-        boton.addEventListener("click", () => agregarAlCarrito(item.id));
         boton.addEventListener("click", () => {
-            Swal.fire({
-                icon: "success",
-                title: "Producto Agregado al Carrito",
-                showConfirmButton: false,
-                timer: 800
-            });
+            if (item.stock > 0) {
+                agregarAlCarrito(item.id);
+                Swal.fire({
+                    icon: "success",
+                    title: "Producto Agregado al Carrito",
+                    showConfirmButton: false,
+                    timer: 800
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops... Lo sentimos, stock no disponible!",
+                    confirmButtonColor: "#451952",
+                });
+            }
         });
     });
 }

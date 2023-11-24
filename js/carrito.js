@@ -9,13 +9,15 @@ const agregarAlCarrito = (id) => {
         if (productoAgregado.stock > 0) {
             carrito.push(productoAgregado);
             productoAgregado.stock--;
-        } 
+        }
+        carritoCounter();
     }
 };
 
 
 const verCarrito = document.getElementById("verCarrito");
 const carritoContainer = document.getElementById("carritoContainer");
+const cantidadCarrito = document.getElementById("cantidadCarrito");
 
 
 verCarrito.addEventListener("click", () => {
@@ -24,12 +26,14 @@ verCarrito.addEventListener("click", () => {
     const carritoHeader = document.createElement("div");
     carritoHeader.className = "carrito-header"
     carritoHeader.innerHTML = `
-    <h2 class = "carrito-header-title">CARRTIO</h2>
+    <h2 class = "carrito-header-title">CARRTIO DE COMPRAS</h2>
     `
     carritoContainer.append(carritoHeader);
 
-    const carritoButton = document.createElement("h1");
-    carritoButton.innerText = "X";
+    const carritoButton = document.createElement("img");
+    carritoButton.src = "../assets/cruz.png";
+    carritoButton.style.width = "5rem";
+    carritoButton.style.height = "5rem";
     carritoButton.className = "carrito-header-button"
 
     carritoButton.addEventListener("click", () => {
@@ -61,7 +65,7 @@ verCarrito.addEventListener("click", () => {
                 title: "Eliminar Producto del Carrito?",
                 icon: "warning",
                 showCancelButton: true,
-                confirmButtonColor: "#A5D272",
+                confirmButtonColor: "#451952",
                 cancelButtonColor: "#d33",
                 confirmButtonText: "SI!"
             }).then((result) => {
@@ -69,7 +73,7 @@ verCarrito.addEventListener("click", () => {
                     Swal.fire({
                         title: "Producto Eliminado!",
                         icon: "success",
-                        confirmButtonColor: "#A5D272",
+                        confirmButtonColor: "#451952",
                     });
                     const productoId = eliminarProducto.getAttribute('data-id');
 
@@ -86,6 +90,7 @@ verCarrito.addEventListener("click", () => {
                         const total = carrito.reduce((acum, productoAgregado) => acum + productoAgregado.precio, 0);
                         document.querySelector('.total-content').innerHTML = `Total a Pagar: $${total}`;
 
+                        carritoCounter();
                     };
                 }
             });
@@ -102,3 +107,12 @@ verCarrito.addEventListener("click", () => {
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
 });
+
+
+const carritoCounter = () => {
+    cantidadCarrito.style.display = "block";
+    cantidadCarrito.innerText = carrito.length;
+    if (carrito.length === 0) {
+        cantidadCarrito.style.display = "none";
+    };
+};

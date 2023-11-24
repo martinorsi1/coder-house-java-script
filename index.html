@@ -13,14 +13,14 @@
 </head>
 
 <body>
-    <!-- Escabezado -->
+    <!-- ENCABEZADO -->
     <header>
         <!-- Barra de Navegacion -->
         <nav class="navbar navbar-expand-lg  navbar-light">
             <div class="container-fluid d-flex justify-content-between align-items-center">
                 <a class="navbar-brand" href="./index.html"><img class="logos" src="./assets/logoAn.png" alt="logo"></a>
                 <div class="carrito">
-                    <img id="verCarrito" src="./assets/carrito.png" alt="logo carrito de compras">
+                    <img id="verCarrito" src="./assets/carrito.png" alt="logo carrito de compras"><span id="cantidadCarrito" class="cantidad-carrito"></span>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -48,7 +48,8 @@
         </nav>
     </header>
     <main>
-        <!-- Contendido Principal -->
+        <!-- CONTENIDO PRONCIPAL -->
+        <!-- Seccion Carrusel de Fotos -->
         <section class="section-carrusel">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -58,47 +59,47 @@
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/5yvLbZvC/dos.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/yxFgw04h/tres.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/vBC5RQ1y/cuatro.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/J4VjPzVc/cinco.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/zBHRF9xc/seis.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/KYzTRKBF/siete.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/Vvy0GDTL/ocho.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/mgTCWprP/nueve.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/vZX9Y713/diez.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/L6tL7Fmd/once.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                     <div class="carousel-item" data-bs-interval="3000">
                         <img src="https://i.postimg.cc/43S9tJQc/doce.jpg" class="rounded mx-auto  d-block w-100"
-                            alt="imagen inconcert">
+                            alt="imagen publicitaria">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
@@ -113,7 +114,9 @@
                 </button>
             </div>
         </section>
+        <!-- Seccion Catalogo de Productos -->
         <div id="cardsContainer"></div>
+        <!-- Seccion Categorias -->
         <section class="section-categoria">
             <h2>CATEGORIAS</h2>
             <button id="enlaceHombre" >
@@ -132,10 +135,12 @@
         <div id="carritoContainer" class="carrito-container"></div>
     </main>
     <footer class="container-footer">
-        <!-- Pie de Pagina (Redes) -->
+        <!-- PIE DE PAGINA -->
+        <!-- Copyright -->
         <div>
-            <h3>&copy; Copyright 2023 / ZapasAn</h3>
+            <h3>&copy; ZapasAn</h3>
         </div>
+        <!-- Redes Sociales -->
         <div class="iconos">
             <ul>
                 <li>
