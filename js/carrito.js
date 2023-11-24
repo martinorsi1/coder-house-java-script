@@ -31,7 +31,7 @@ verCarrito.addEventListener("click", () => {
     carritoContainer.append(carritoHeader);
 
     const carritoButton = document.createElement("img");
-    carritoButton.src = "../assets/cruz.png";
+    carritoButton.src = "https://i.postimg.cc/MpYDkJd8/cruz.png";
     carritoButton.style.width = "5rem";
     carritoButton.style.height = "5rem";
     carritoButton.className = "carrito-header-button"
