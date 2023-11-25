@@ -48,12 +48,12 @@ allProducts.addEventListener("click", () => {
 function seccionMujer(id) {
     document.getElementById("navbarNavDropdown").classList.remove("show");
 
-    let flitradoM = zapatillas.filter((item) => item.categoria === "MUJER");
+    let filtradoM = zapatillas.filter((item) => item.categoria === "MUJER");
 
     let cardsContainer = document.getElementById("cardsContainer");
     cardsContainer.innerHTML = "";
 
-    flitradoM.forEach((item) => {
+    filtradoM.forEach((item) => {
         const div = document.createElement("div");
         div.className = "card";
         div.innerHTML = `
