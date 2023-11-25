@@ -51,13 +51,13 @@ const mostrarCarrito = () => {
         <img src="${item.imagen}"/>
         <h3>${item.nombre}</h3>
         <p>$${item.precio}</p>
-        <button id = "botonesEliminar" class = "eliminar-btn" "${item.id}"> Eliminar </button>
+        <button id = "botonesEliminar${item.id}" class = "eliminar-btn"> Eliminar </button>
         `;
 
         carritoContainer.append(carritoContent);
 
 
-        let eliminar = document.getElementById("botonesEliminar");
+        let eliminar = document.getElementById(`botonesEliminar${item.id}`);
 
         eliminar.addEventListener("click", () => {
             Swal.fire({
@@ -74,7 +74,7 @@ const mostrarCarrito = () => {
                         icon: "success",
                         confirmButtonColor: "#451952",
                     });
-                    eliminarProducto();
+                    eliminarProducto(item.id);
                 }
             });
         });
@@ -91,8 +91,8 @@ const mostrarCarrito = () => {
 
 
 
-const eliminarProducto = () => {
-    const foundId = carrito.find((item) => item.id);
+const eliminarProducto = (id) => {
+    const foundId = carrito.find((item) => item.id === id);
     //Uso el metodo find para buscar cual es el id del producto que el usuario quiere eliminar.
     carrito = carrito.filter((carritoId) => {
         //Con el metodo filter, filtro todos los productos del carrito que no tengan el id del producto que el usuario quiere.
