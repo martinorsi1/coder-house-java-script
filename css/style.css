@@ -230,6 +230,25 @@ main {
 
 
 
+/* ...................................................PROMESA.......................................... */
+
+#alertaWhatsapp{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 3rem;
+
+}
+
+.social-wpp{
+    width: 6rem;
+    height: auto;
+    opacity: 5;
+
+}
+
+
+
 
 /* ...................................................CARRITO.......................................... */
 

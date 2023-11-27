@@ -3,7 +3,7 @@ let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 const agregarAlCarrito = (id) => {
 
-    const productoAgregado = zapatillas.find((item) => item.id === id);
+    const productoAgregado = data.find((item) => item.id === id);
 
     if (productoAgregado) {
         if (productoAgregado.stock > 0) {
