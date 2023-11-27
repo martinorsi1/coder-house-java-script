@@ -27,22 +27,21 @@ allProducts.addEventListener("click", () => {
 
                 const boton = document.getElementById(`boton${item.id}`);
                 boton.addEventListener("click", () => {
-                    if (item.stock > 0) {
-                        agregarAlCarrito(item.id);
-                        Swal.fire({
-                            icon: "success",
-                            title: "Producto Agregado al Carrito",
-                            showConfirmButton: false,
-                            timer: 800
-                        });
-                    } else {
-                        Swal.fire({
+                    item.stock > 0
+                        ? (agregarAlCarrito(item.id),
+                            Swal.fire({
+                                icon: "success",
+                                title: "Producto Agregado al Carrito",
+                                showConfirmButton: false,
+                                timer: 800,
+                            }))
+                        : Swal.fire({
                             icon: "error",
                             title: "Oops... Lo sentimos, stock no disponible!",
                             confirmButtonColor: "#451952",
                         });
-                    }
                 });
+
             });
             const agregarAlCarrito = (id) => {
 
@@ -353,3 +352,56 @@ alertaWhatsappPromise()
 
 
 
+
+
+
+
+    
+// alert("A continuacion elija el Metodo de Pago para realizar la compra");
+// let metodoDePago = Number(prompt("Metodo de Pago:1-Transferencia Bancaria 2-Trarjeta de Credito"));
+
+// while (metodoDePago != 1 && metodoDePago != 2) {
+//     alert("Por favor Ingrese el Numero correcto de la opcion deseada");
+//     metodoDePago = Number(prompt("Metodo de Pago:1-Tranferencia Bancaria 2-Trarjeta de Credito"));
+// };
+
+// switch (metodoDePago) {
+//     case 1:
+//         alert(`Haz elegido la opcion Tranferencia bancaria. El precio final es de $${total} UYU`);
+//         break;
+
+//     case 2:
+//         alert("Haz elegido la opcion Tarjeta de Credito, lo cual genera un aumento del precio final de las Zapas!");
+
+//         let numeroCuotas = Number(prompt("Por favor elija la cantidad de cuotas a Pagar: 2  4  6  10"));
+
+//         while (numeroCuotas != 2 && numeroCuotas != 4 && numeroCuotas != 6 && numeroCuotas != 10) {
+//             alert("Por favor elija la cantidad correcta de cuotas");
+//             numeroCuotas = Number(prompt("Por favor elija la cantidad de cuotas a Pagar: 2  4  6  10"));
+//         }
+
+//         let precioAumento;
+
+//         switch (numeroCuotas) {
+//             case 2:
+//                 precioAumento = aumento(total, aumento1);
+//                 alert(`Perfecto, el precio final es de $${precioAumento} UYU`);
+//                 break;
+
+//             case 4:
+//                 precioAumento = aumento(total, aumento2);
+//                 alert(`Perfecto, el precio final es de $${precioAumento} UYU`);
+//                 break;
+
+//             case 6:
+//                 precioAumento = aumento(total, aumento3);
+//                 alert(`Perfecto, el precio final es de $${precioAumento} UYU`);
+//                 break;
+
+//             case 10:
+//                 precioAumento = aumento(total, aumento4);
+//                 alert(`Perfecto, el precio final es de $${precioAumento} UYU`);
+//                 break;
+//         }
+//         break;
+// };
